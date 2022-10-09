@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offsite</title>
+    <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.15.10/dist/js/uikit-icons.min.js"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        </style> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+<link href="https://unpkg.com/pattern.css" rel="stylesheet">  
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+
+<body style="background-color: #fcfbfb; 
+  ">
+  
+  
+            <div class="main_container">
+                <div class="main__content">
+                   
+         
+                  <h1>Electricity Consumption Per Building </h1>
+                  <p>The Engie Electricity Consumption Dashboard for Ohio State University shows the electricity consumption for dorm and non dorm buildings. This is important because it can help students, faculty, and staff understand their impact on the environment and save money.</p>
+                </div>
+                <div class="imagecontainer">
+                  <!--  <img src="img/2.jpg" alt="" id="mainimg">-->
+                </div>
+            </div>
+    
+        
+        
+        <div class="group" uk-slideshow="animation: fade" data-uk-slideshow>
+        
+          <ul id="slides" class="uk-slideshow-items">
+            <li >
+        <div class="images info1" >
+            <div class="center">
+                <h1 id = "key">Busch House - Electricity Consumption (kBTU)</h1>
+                <p id="tagline">electricity/time</p>
+                     </div>
+                
+                     <canvas class ="canvasset"   id="main" width="400" height="400" ></canvas>
+                
+               
+            </div>
+            
+            </li>
+            <li>
+            <div class="images info1">
+                <div class="center">
+                    <h1  id = "key1">Smith-Steeb Hall - Electricity Consumption (kBTU)</h1>
+                    <p id="tagline">electricity/time</p>
+                         </div>
+                      
+                         <canvas class ="canvasset"  id="main2" width="400" height="400"></canvas>
+                    
+                   
+                </div>
+              </li>
+              <li>
+                <div class="images info1">
+                    <div class="center">
+                        <h1 id = "key2">Baker Hall - Electricity Consumption (kBTU)</h1>
+                        <p id="tagline">electricity/time</p>
+                             </div>
+                            
+                             <canvas class ="canvasset" id="main3" width="400" height="400"></canvas>
+                        
+                       
+                    </div>
+                    </li>
+                   
+                      <li>
+                          
+                    
+                    <div class="images info1">
+                        <div class="center">
+                            <h1 id = "key7">Morrill, Justin S, Tower - Electricity Consumption (kBTU)</h1>
+                            <p id="tagline">electricity/time</p>
+                                 </div>
+                               
+                                 <canvas class ="canvasset" id="main4" width="400" height="400"></canvas>
+                               
+                
+                           
+                           
+                        </div>
+                      </li>
+                      <li>
+                        <div class="images info1">
+                            <div class="center">
+                                <h1 id = "key3">Taylor Tower - Electricity Consumption (kBTU)</h1>
+                                <p id="tagline">electricity/time</p>
+                                     </div>
+                                
+                                     <canvas class ="canvasset" id="main5" width="400" height="400"></canvas>
+                                
+                               
+                            </div>
+                            </li>
+                            <li>
+                            <div class="images info1">
+                                <div class="center">
+                                    <h1 id = "key4">Average electricity</h1>
+                                    <p id="tagline">electricity/time</p>
+                                         </div>
+                                      
+                                         <canvas class ="canvasset" id="mainavg" width="400" height="400"></canvas>
+                                    
+                                   
+                                </div>
+                                </li>
+                              </ul>
+                            
+                              
+        </div>
+        <div>
+          <ul id="slides" class="uk-slideshow-items">
+            <li>
+        <div class="images info1">
+            <div class="center">
+                <h1 id = "key">Busch House - Electricity Consumption (kBTU)</h1>
+                <p id="tagline">electricity/time</p>
+                     </div>
+                
+                     <canvas class ="canvasset"   id="main" width="400" height="400"></canvas>
+                
+               
+            </div>
+            
+            </li>
+            <li>
+            <div class="images info1">
+                <div class="center">
+                    <h1  id = "key1">Smith-Steeb Hall - Electricity Consumption (kBTU)</h1>
+                    <p id="tagline">electricity/time</p>
+                         </div>
+                      
+                         <canvas class ="canvasset"  id="main2" width="400" height="400"></canvas>
+                    
+                   
+                </div>
+              </li>
+            </ul>
+          </div>
+  
+              <div class="group" uk-slideshow="animation: fade" data-uk-slideshow>
+        
+                <ul id="slides" class="uk-slideshow-items">
+              <li>
+                <div class="images info1">
+                    <div class="center">
+                        <h1 id = "key2">"Engie Energy Tip: Consider utilizing a smart power strip which will reduce phantom energy consumption."</h1>
+                        
+                             </div>
+                            
+                          
+                        
+                       
+                    </div>
+                    </li>
+                   
+                      <li>
+                          
+                    
+                  
+                      <div class="images info1">
+                        <div class="center">
+                            <h1 id = "key2">"Engie Energy Tip: Consider opening windows for natural air and sunlight to substitute A/C when possible."</h1>
+                            
+                                 </div>
+                                
+                              
+                            
+                           
+                   
+                      </li>
+                      <li>
+                        <div class="images info1">
+                          <div class="center">
+                              <h1 id = "key2">"Energy Energy Tip: Before leaving your room for the day, check that all lights are turned off."</h1>
+                              
+                                   </div>
+                                  
+                                
+                              
+                             
+                          </div>
+                            </li>
+                            <li>
+                              <div class="images info1">
+                                <div class="center">
+                                    <h1 id = "key2">"Energy Energy Tip: Before leaving your room for the day, check that all lights are turned off."</h1>
+                                    
+                                         </div>
+                                        
+                                      
+                                    
+                                   
+                                </div>
+                                </li>
+                              </ul>
+        </div>
+
+    
+        
+      
+              
+               
+            </div>
+        </div>
+        <div class="footer">
+            <p class="website_rights">ezServe 2022. All rights reserved</p>
+        </div>
+       
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+
+	<script>
+    
+
+        var arr = [];  
+        var arr2 = []
+      var  arr3 = [];
+    var arr4  = [];
+    var arr5 = [];
+    var h = 7;
+			var i= 0;
+            var g;
+		//Store information about your firebase so we can connect
+		
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		//IMPORTANT: REPLACE THESE WITH YOUR VALUES (these ones won't work)
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+		var config = {
+            apiKey: "AIzaSyD_TKhw3F3qmGD3Rn3hzBxwxF9fkK_7UJw",
+
+authDomain: "team52-a83e7.firebaseapp.com",
+
+databaseURL: "https://team52-a83e7-default-rtdb.firebaseio.com",
+
+projectId: "team52-a83e7",
+
+storageBucket: "team52-a83e7.appspot.com",
+
+messagingSenderId: "836134408871",
+
+appId: "1:836134408871:web:5e1c1146d719e2faabc182",
+
+measurementId: "G-PKBEDB59K2"
+
+		};
+		
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+		
+		//initialize your firebase
+		firebase.initializeApp(config);
+		var database = firebase.database();
+		
+		//create a variable to hold our orders list from firebase
+        
+		var firebaseOrders= database.ref();
+        var firebaseOrdersCollection = firebaseOrders.limitToLast(8);
+        console.log(firebaseOrdersCollection);
+
+			
+			//'push' (aka add) your order to the existing list
+		//'orders' is the name of the 'collection' (aka database table)
+        
+		
+		
+		//create a 'listener' which waits for changes to the values inside the firebaseOrdersCollection 
+		firebaseOrdersCollection.on('value',  snap =>{
+			
+			//create an empty string that will hold our new HTML
+			
+			
+			//this is saying foreach order do the following function...
+			snap.forEach(function(firebaseOrderReference){
+                //console.log(firebaseOrderReference.val())
+               
+				firebaseOrderReference.forEach( data1 =>{
+                    
+                    if(data1.key == "Busch House - Electricity Consumption (kBTU)"){
+                      
+                        arr.push( Math.round(data1.val()));
+                        console.log(arr[i]);
+                        $("#key").text =  "Busch House - Electricity Consumption (kBTU)";
+
+                        
+                    i++
+                }
+            else    if(data1.key == "Smith-Steeb Hall - Electricity Consumption (kBTU)"){
+                      
+                      arr2.push( Math.round(data1.val()));
+                      console.log(arr2[i]);
+                      $("#key1").text =  "Busch House - Electricity Consumption (kBTU)";
+                      
+                  i++
+              }
+             else if(data1.key == "Baker Hall - Electricity Consumption (kBTU)"){
+                      
+                      arr3.push( Math.round(data1.val()));
+                      console.log(arr3[i]);
+                      
+                  i++
+              }
+            else  if(data1.key == "Morrill, Justin S, Tower - Electricity Consumption (kBTU)"){
+                      
+                      arr4.push( Math.round(data1.val()));
+                      console.log(arr4[i]);
+                      
+                  i++
+              }
+             else if(data1.key == "Taylor Tower - Electricity Consumption (kBTU)"){
+                      
+                      arr5.push( Math.round(data1.val()));
+                      console.log(arr5[i]);
+                      
+                  i++
+              }
+              
+                
+                 
+          
+                    
+                    
+                    
+                    })
+         
+				//this gets the actual data (JSON) for the order.
+				//var order = firebaseOrderReference.val();
+               // console.log(order);
+              
+				 //check your console to see it!
+               
+				
+			});
+            
+			//actaull put the html on the page inside the element with the id PreviousOrders
+            
+var  hashtags =arr;
+
+var chart1 = document.getElementById("main");
+var chart2 = document.getElementById("main2");
+var chart3 = document.getElementById("main3");
+var chart4 = document.getElementById("main4");
+var chart5 = document.getElementById("main5");
+var chart6 = document.getElementById("mainavg");
+console.log(arr);
+console.log([65, 5900, 80, 81, 56, 55, 40]);
+
+const labels = ["M","T","W","Th","F","S","Su"]
+var myBarChart = new Chart(chart1, {
+  type: 'bar',
+  data: {
+    labels: labels,
+  datasets: [{
+    label: 'Busch House - Electricity Consumption (kBTU)',
+    
+    data: [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6]],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+  },
+  options: {indexAxis: 'x',
+maintainAspectRatio: true,
+y: -100000,
+  }
+
+});
+var myBarChart = new Chart(chart2, {
+  type: 'bar',
+  data: {
+    labels: labels,
+  datasets: [{
+    label: 'Smith-Steeb Hall - Electricity Consumption (kBTU)',
+    
+    data: [arr2[0], arr2[1], arr2[2], arr2[3], arr2[4], arr2[5], arr2[6]],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+  },
+  options: {indexAxis: 'x',
+maintainAspectRatio: true,
+y: -100000,
+  }
+
+});
+var myBarChart = new Chart(chart3, {
+  type: 'bar',
+  data: {
+    labels: labels,
+  datasets: [{
+    label: 'Baker Hall - Electricity Consumption (kBTU)',
+    
+    data: [arr3[0], arr3[1], arr3[2], arr3[3], arr3[4], arr3[5], arr3[6]],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+  },
+  options: {indexAxis: 'x',
+maintainAspectRatio: true,
+y: -100000,
+  }
+
+});
+var myBarChart = new Chart(chart4, {
+  type: 'bar',
+  data: {
+    labels: labels,
+  datasets: [{
+    label: 'Morrill, Justin S, Tower - Electricity Consumption (kBTU)',
+    
+    data: [arr4[0], arr4[1], arr4[2], arr4[3], arr4[4], arr4[5], arr4[6]],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+  },
+  options: {indexAxis: 'x',
+maintainAspectRatio: true,
+y: -100000,
+  }
+
+});
+var myBarChart = new Chart(chart5, {
+  type: 'bar',
+  data: {
+    labels: labels,
+  datasets: [{
+    label: 'Taylor Tower - Electricity Consumption (kBTU)',
+    
+    data: [arr5[0], arr5[1], arr5[2], arr5[3], arr5[4], arr5[5], arr5[6]],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+  },
+  options: {indexAxis: 'x',
+maintainAspectRatio: true,
+y: -100000,
+  }
+
+});
+let mean  = (arr[6] +arr2[6] + arr3[6] +arr4[6] +arr5[6])/5
+console.log(mean)
+var myBarChart = new Chart(chart6, {
+  type: 'line',
+  data: {
+    labels: labels,
+  datasets: [{
+    label: 'Taylor Tower - Electricity Consumption (kBTU)',
+    
+    data: [(arr[0] +arr2[0] + arr3[0] +arr4[0] +arr5[0])/5, (arr[1] +arr2[1] + arr3[1] +arr4[1] +arr5[1])/5, (arr[2] +arr2[2] + arr3[2] +arr4[2] +arr5[2])/5, (arr[3] +arr2[3] + arr3[3] +arr4[3] +arr5[3])/5, (arr[4] +arr2[4] + arr3[4] +arr4[4] +arr5[4])/5,(arr[5] +arr2[5] + arr3[5] +arr4[5] +arr5[5])/5,(arr[6] +arr2[6] + arr3[6] +arr4[6] +arr5[6])/5],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+  },
+  options: {indexAxis: 'x',
+maintainAspectRatio: true,
+y: -100000,
+  }
+
+});
+		
+			
+			//note: an alternative approach would be to create a hidden html element for one order on the page, duplicate it in the forEach loop, unhide it, and replace the information, and add it back. 
+		});
+        console.log(arr);
+        
+      
+         ;
+        // setTimeout(myGreeting, 5000);
+        
+
+          UIkit.slideshow(document.getElementById("slides"),{animation: 'fade',duration: 700,autoplay: true, autoplayInterval: 4000, ratio: "18:18"})
+         
+        
+	</script>
+
+</body>
+
+</html>
